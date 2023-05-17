@@ -28,7 +28,7 @@ class User:
 users = {}
 
 
-#Sign
+# Sign(Main)
 @bot.command(name='sign')
 async def sign(ctx):
     user_id = ctx.author.id
@@ -46,7 +46,7 @@ async def sign(ctx):
     await ctx.send(f'{ctx.author.mention} Sign in successfully! Get {coin_reward} Coin！')
 
     
-#看自己的Coin
+# see user coin
 @bot.command(name='coin')
 async def coin(ctx):
     user_id = ctx.author.id
@@ -57,10 +57,10 @@ async def coin(ctx):
     await ctx.send(f'{ctx.author.mention} You have {coin} Coin！')
 
     
-#增加coin
+# add coin
 @bot.command(name='addcoin')
 async def add(ctx, member: discord.Member, amount: int):
-    if ctx.author.id != 795328745103556608:
+    if ctx.author.id != Your_Discord_ID:
         await ctx.send(f'{ctx.author.mention} You cannot do this！')
         return
     if member.id not in users:
@@ -69,10 +69,10 @@ async def add(ctx, member: discord.Member, amount: int):
     await ctx.send(f'{member.mention} You Get {amount} Coin！')
 
     
-#移除Coin
+# remove coin
 @bot.command(name='removecoin')
 async def remove(ctx, member: discord.Member, amount: int):
-    if ctx.author.id != 795328745103556608:
+    if ctx.author.id != Your_Discord_ID :
         await ctx.send(f'{ctx.author.mention} You cannot do this！')
         return
     if member.id not in users:
@@ -85,7 +85,7 @@ async def remove(ctx, member: discord.Member, amount: int):
         await ctx.send(f'{member.mention} have error！')
 
         
-#錯誤訊息
+# error message 
 @bot.event
 async def on_command_error(ctx, error):
     if isinstance(error, commands.CommandNotFound):
