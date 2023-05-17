@@ -13,9 +13,11 @@ pip install datetime
 ```  
 pip install discord.py  
 ```  
-  4. Replace "Your_Token" with your Token  
+  4. Replace "Your_Token" with your Bot Token  (on line 96)
   
-  5. Use **admin** run the code(Prevent messages from being saved due to insufficient permissions)  
+  5. Replace "Your_Discord_ID" with your Discord ID  (on line 63 and line 75)
+  
+  6. Use **admin** run the code(Prevent messages from being saved due to insufficient permissions)  
 
 ## If there is insufficient permission, it may result in the following error:  
 1.
