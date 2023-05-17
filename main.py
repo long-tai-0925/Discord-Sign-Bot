@@ -7,7 +7,7 @@ bot = commands.Bot(command_prefix='!')
 
 @bot.event
 async def on_ready():
-    print('目前登入身份：', bot.user)
+    print('User：', bot.user)
 
 class User:
     def __init__(self, id, name):
