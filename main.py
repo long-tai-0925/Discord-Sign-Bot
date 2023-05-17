@@ -41,7 +41,7 @@ async def sign(ctx):
         users[user_id] = User(user_id, ctx.author.name)
     users[user_id].add_coin(coin_reward)
     users[user_id].last_sign = today
-    with open('c:/Users/tulub/OneDrive/桌面/sign_log.txt', 'a') as f:
+    with open('/sign_log.txt', 'a') as f:
         f.write(f'{user_id} {today} {coin_reward}\n')
     await ctx.send(f'{ctx.author.mention} Sign in successfully! Get {coin_reward} Coin！')
 
